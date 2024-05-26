@@ -1,0 +1,89 @@
+{
+    "items": {
+        "info": {
+            "logo": "Smart Service",
+            "name": "Иванов Иван Петрович",
+            "position": "Директор"
+        },
+        "items": [
+            {
+                "name": "+79725617548",
+                "url": "./mobileImg.svg"
+            },
+            {
+                "name": "+79725617548",
+                "url": "./phoneImg.svg"
+            },
+            {
+                "name": "+79725617548",
+                "url": "./phoneImg.svg"
+            },
+            {
+                "name": "IvanPetr@gmail.com",
+                "url": "./mailImg.svg"
+            },
+            {
+                "name": "IvanPetr@gmail.com",
+                "url": "./urlImg.svg"
+            },
+            {
+                "name": "Санкт-Петербург, Аптекарская набережная, 20",
+                "url": "adressImg.svg"
+            },
+            {
+                "name": "12.5.1978",
+                "url": "./dateImg.svg"
+            },
+            {
+                "name": "Доцент, Доцент кафедры информационной безопасности",
+                "url": "./personImg.svg"
+            }
+        ],
+        "links": [
+            {
+                "img": "./Telegram.svg",
+                "link": ""
+            },
+            {
+                "img": "./Whatsapp.svg",
+                "link": ""
+            },
+            {
+                "img": "./Viber.svg",
+                "link": ""
+            },
+            {
+                "img": "./Instagram.svg",
+                "link": ""
+            },
+            {
+                "img": "Vk.svg",
+                "link": ""
+            },
+            {
+                "img": "Facebook.svg",
+                "link": ""
+            },
+            {
+                "img": "./YouTube.svg",
+                "link": ""
+            },
+            {
+                "img": "./Ok.svg",
+                "link": ""
+            },
+            {
+                "img": "./Dzen.svg",
+                "link": ""
+            },
+            {
+                "img": "Tiktok.svg",
+                "link": ""
+            },
+            {
+                "img": "Linked_in.svg",
+                "link": ""
+            }
+        ]
+    }
+}

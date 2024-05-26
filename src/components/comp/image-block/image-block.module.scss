@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 279px;
+}
+
+.imageSwiper {
+    height: 495px;
+    background-image: url('../../../../public/baseImg.png');
+    border-radius: 8.11px;
+    margin-bottom: 16px;
+}
+
+.button {
+    padding: 18px 60px;
+    border-radius: 8.11px;
+    background-color: #060606;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 131.3%;
+    letter-spacing: 0px;
+    color: #fefefe;
+}
