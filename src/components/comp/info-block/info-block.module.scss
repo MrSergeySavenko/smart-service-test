@@ -22,6 +22,12 @@
     margin-bottom: 23px;
 }
 
+.titleLine {
+    width: 100%;
+    border: 1px solid rgb(6, 6, 6);
+    margin-bottom: 12px;
+}
+
 .contentWrapper {
     display: flex;
     flex-direction: column;
@@ -88,4 +94,27 @@
     font-weight: 400;
     line-height: 120%;
     letter-spacing: 0%;
+}
+
+@media (max-width: 561px) {
+    .infoWrapper {
+        width: 100%;
+    }
+
+    .contentWrapper {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .name {
+        margin-left: 21px;
+    }
+
+    .position {
+        margin-left: 21px;
+    }
+
+    .linksWrapper {
+        padding-left: 20px;
+    }
 }

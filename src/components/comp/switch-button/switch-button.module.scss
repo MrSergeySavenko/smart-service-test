@@ -15,7 +15,14 @@
     color: #fefefe;
 }
 
-.active-text {
+.activeText {
+    font-family: 'TT Firs Neue';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: right;
+    color: #fefefe;
+    opacity: 0.5;
 }
 
 .leftArrow {
@@ -24,8 +31,24 @@
     display: block;
 }
 
+.activeLeftArrow {
+    width: 16px;
+    margin-right: 12px;
+    display: block;
+    opacity: 50%;
+}
+
 .rightArrow {
     width: 16px;
     padding-right: 12px;
+    display: block;
     transform: rotate(180deg);
+}
+
+.activeRightArrow {
+    width: 16px;
+    padding-right: 12px;
+    transform: rotate(180deg);
+    display: block;
+    opacity: 50%;
 }

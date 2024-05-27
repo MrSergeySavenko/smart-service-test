@@ -1,0 +1,16 @@
+.imageSwiper {
+    height: 495px;
+    background-image: url('../../../../public/baseImg.png');
+    border-radius: 8.11px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 561px) {
+    .imageSwiper {
+        height: 369px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 0px;
+        margin-bottom: 44px;
+    }
+}

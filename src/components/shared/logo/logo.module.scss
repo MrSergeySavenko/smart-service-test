@@ -1,0 +1,16 @@
+.logo {
+    color: #000000;
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0%;
+    margin-bottom: 35px;
+    max-width: 300px;
+}
+
+@media (max-width: 561px) {
+    .logo {
+        margin-bottom: 27px;
+    }
+}

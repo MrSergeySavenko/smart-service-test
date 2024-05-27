@@ -8,6 +8,9 @@ import { fetchData } from '../../__data__/store/actions/actions';
 import { InfoBlock } from '../../components/comp/info-block/info-block';
 import { LinksFooter } from '../../components/comp/links-footer/links-footer';
 import { useNavigate } from 'react-router-dom';
+import { Logo } from '../../components/shared/logo/logo';
+import { Swiper } from '../../components/shared/swiper/swiper';
+import { MobileBtn } from '../../components/comp/modile-btn/mobile-btn';
 
 export const EmployeePage = () => {
     const { data } = useSelector((state) => state.smartService);
@@ -18,18 +21,18 @@ export const EmployeePage = () => {
 
     const navigate = useNavigate();
 
+    //потом засунуть в катсомный хук
+
     useEffect(() => {
         const handleResize = (event) => {
             setWidth(event.target.innerWidth);
         };
         window.addEventListener('resize', handleResize);
-        // if (width < 560) {
-        //     return handleNavigateToCompany();
-        // }
+        console.log(width);
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [document.documentElement.clientWidth]);
+    }, [window.innerWidth]);
 
     useEffect(() => {
         dispatch(fetchData());
@@ -41,15 +44,35 @@ export const EmployeePage = () => {
 
     return (
         <div className={styles.allWrapper}>
+            {width <= 570 && (
+                <>
+                    <Logo logo={data?.info.logo} />
+                    <Swiper />
+                </>
+            )}
             <div className={styles.contentWrapper}>
-                <div className={styles.switchContainer}>
-                    <SwitchButton text='о сотруднике' left={true} onClick={() => {}} />
-                    <SwitchButton text='о компании' left={false} onClick={handleNavigateToCompany} />
-                </div>
+                {width <= 570 ? (
+                    <div className={styles.buttonWrapper}>
+                        <MobileBtn src='/groupImg.svg'>сохранить визитку</MobileBtn>
+                        <MobileBtn src='/groupPhone.svg'>позвонить</MobileBtn>
+                    </div>
+                ) : (
+                    <div className={styles.switchContainer}>
+                        <SwitchButton text='о сотруднике' left={true} onClick={() => {}} activePage={true} />
+                        <SwitchButton
+                            text='о компании'
+                            left={false}
+                            onClick={handleNavigateToCompany}
+                            activePage={false}
+                        />
+                    </div>
+                )}
+
                 <div className={styles.whiteBlockWrapper}>
                     <div className={styles.wrapper}>
-                        <ImageBlock />
-                        <InfoBlock infoArr={data?.items} infoText={data?.info} />
+                        {width >= 570 && <ImageBlock />}
+
+                        <InfoBlock infoArr={data?.items} infoText={data?.info} width={width} />
                     </div>
                     <div className={styles.footerWrapper}>
                         <nav className={styles.line} />

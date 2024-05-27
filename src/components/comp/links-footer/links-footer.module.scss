@@ -13,3 +13,9 @@
     width: 24px;
     height: 24px;
 }
+
+@media (max-width: 561px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}

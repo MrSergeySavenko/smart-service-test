@@ -22,8 +22,13 @@ export const CompanyPage = () => {
         <div className={styles.allWrapper}>
             <div className={styles.contentWrapper}>
                 <div className={styles.switchContainer}>
-                    <SwitchButton text='о сотруднике' left={true} onClick={handleNavigateToEmployee} />
-                    <SwitchButton text='о компании' left={false} onClick={() => {}} />
+                    <SwitchButton
+                        text='о сотруднике'
+                        left={true}
+                        onClick={handleNavigateToEmployee}
+                        activePage={false}
+                    />
+                    <SwitchButton text='о компании' left={false} onClick={() => {}} activePage={true} />
                 </div>
                 <div className={styles.whiteBlockWrapper}>
                     <nav className={styles.line} />
