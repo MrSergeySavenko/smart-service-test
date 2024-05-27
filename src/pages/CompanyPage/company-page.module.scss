@@ -1,6 +1,7 @@
 .allWrapper {
     padding-top: 47px;
     padding-bottom: 73px;
+    height: 100vh;
     background-color: #292727;
 }
 
@@ -23,20 +24,14 @@
     flex-direction: column;
     border-radius: 8px;
     background: #f4f4f4;
-    padding: 32px 0px;
+    padding: 84px 0 32px 0px;
 }
 
 .wrapper {
     display: flex;
     flex-direction: row;
-
-    margin-bottom: 16px;
-    justify-content: flex-end;
-}
-
-.infoWrapper {
-    display: flex;
-    flex-direction: row;
+    margin-bottom: 146px;
+    padding-left: 32px;
 }
 
 .line {

@@ -1,0 +1,41 @@
+.allWrapper {
+    padding-top: 47px;
+    padding-bottom: 73px;
+    background-color: #292727;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 647px;
+}
+
+.switchContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.whiteBlockWrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #f4f4f4;
+    padding: 32px 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 16px;
+    justify-content: flex-end;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid rgb(6, 6, 6);
+    margin-bottom: 24px;
+}

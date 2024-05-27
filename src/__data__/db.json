@@ -1,9 +1,11 @@
 {
     "items": {
         "info": {
-            "logo": "Smart Service",
+            "logo": "Бытро и качественно",
             "name": "Иванов Иван Петрович",
-            "position": "Директор"
+            "position": "Директор",
+            "companyName": "Smart Service",
+            "description": "Нача компания предоставляет лучшее обслуживаение в сфере IT технологий."
         },
         "items": [
             {
@@ -37,6 +39,36 @@
             {
                 "name": "Доцент, Доцент кафедры информационной безопасности",
                 "url": "./personImg.svg"
+            }
+        ],
+        "companyItems": [
+            {
+                "name": "+79725617548",
+                "url": "./mobileImg.svg"
+            },
+            {
+                "name": "IvanPetr@gmail.com",
+                "url": "./mailImg.svg"
+            },
+            {
+                "name": "IvanPetr@gmail.com",
+                "url": "./urlImg.svg"
+            },
+            {
+                "name": "Санкт-Петербург, Аптекарская набережная, 20",
+                "url": "adressImg.svg"
+            },
+            {
+                "name": "12.5.1978",
+                "url": "./dateImg.svg"
+            },
+            {
+                "name": "Гай Юлий Цезарь, Пантифик Саливан, Хаяо Миядзаки, Федор Бондарчук",
+                "url": "./personImg.svg"
+            },
+            {
+                "name": "Факс",
+                "url": "./print.svg"
             }
         ],
         "links": [
