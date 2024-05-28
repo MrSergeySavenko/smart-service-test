@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { Logo } from '../../components/shared/logo/logo';
 import { Swiper } from '../../components/shared/swiper/swiper';
 import { MobileBtn } from '../../components/comp/modile-btn/mobile-btn';
+import { CompanyPage } from '../CompanyPage/CompanyPage';
 
 export const EmployeePage = () => {
     const { data } = useSelector((state) => state.smartService);
@@ -70,7 +71,7 @@ export const EmployeePage = () => {
 
                 <div className={styles.whiteBlockWrapper}>
                     <div className={styles.wrapper}>
-                        {width >= 570 && <ImageBlock />}
+                        {width > 570 && <ImageBlock />}
 
                         <InfoBlock infoArr={data?.items} infoText={data?.info} width={width} />
                     </div>
@@ -79,6 +80,7 @@ export const EmployeePage = () => {
                         <LinksFooter />
                     </div>
                 </div>
+                {width < 570 && <CompanyPage />}
             </div>
         </div>
     );

@@ -32,3 +32,9 @@
     max-width: 205px;
     text-wrap: wrap;
 }
+
+@media (max-width: 571px) {
+    .contentWrapper {
+        padding-left: 20px;
+    }
+}

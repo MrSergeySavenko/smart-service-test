@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from './company-page.module.scss';
 import { SwitchButton } from '../../components/comp/switch-button/switch-button';
@@ -12,28 +12,52 @@ import { CompanyInfoBlock } from '../../components/comp/company-info-block/compa
 export const CompanyPage = () => {
     const { data } = useSelector((state) => state.smartService);
 
+    const [width, setWidth] = useState(window.innerWidth);
+
     const navigate = useNavigate();
 
     const handleNavigateToEmployee = () => {
         return navigate('/employee');
     };
 
+    useEffect(() => {
+        const handleResize = (event) => {
+            setWidth(event.target.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        if (width <= 570) {
+            return navigate('/empoloyee');
+        }
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [window.innerWidth]);
+
     return (
         <div className={styles.allWrapper}>
             <div className={styles.contentWrapper}>
-                <div className={styles.switchContainer}>
-                    <SwitchButton
-                        text='о сотруднике'
-                        left={true}
-                        onClick={handleNavigateToEmployee}
-                        activePage={false}
-                    />
-                    <SwitchButton text='о компании' left={false} onClick={() => {}} activePage={true} />
-                </div>
+                {width > 570 && (
+                    <div className={styles.switchContainer}>
+                        <>
+                            <SwitchButton
+                                text='о сотруднике'
+                                left={true}
+                                onClick={handleNavigateToEmployee}
+                                activePage={false}
+                            />
+                            <SwitchButton
+                                text='о компании'
+                                left={false}
+                                onClick={() => {}}
+                                activePage={true}
+                            />
+                        </>
+                    </div>
+                )}
                 <div className={styles.whiteBlockWrapper}>
-                    <nav className={styles.line} />
+                    {width > 570 && <nav className={styles.line} />}
                     <div className={styles.wrapper}>
-                        <CompanyNameBlock />
+                        <CompanyNameBlock width={width} />
                         <CompanyInfoBlock infoArr={data?.companyItems} />
                     </div>
                     <div className={styles.footerWrapper}>
