@@ -10,7 +10,7 @@ import { LinksFooter } from '../../components/comp/links-footer/links-footer';
 import { useNavigate } from 'react-router-dom';
 import { Logo } from '../../components/shared/logo/logo';
 import { Swiper } from '../../components/shared/swiper/swiper';
-import { MobileBtn } from '../../components/comp/modile-btn/mobile-btn';
+import { MobileBtn } from '../../components/comp/mobile-btn/mobile-btn';
 import { CompanyPage } from '../CompanyPage/CompanyPage';
 
 export const EmployeePage = () => {
@@ -42,6 +42,21 @@ export const EmployeePage = () => {
         return navigate('/company');
     };
 
+    const handleDownloadVcf = () => {
+        const text = 'Hellow';
+        console.log('click');
+        const link = document.createElement('a');
+
+        link.href = new Blob([text], { type: 'plain/text' });
+        link.setAttribute('download', `1.txt`);
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        link.parentNode.removeChild(link);
+    };
+
     return (
         <div className={styles.allWrapper}>
             {width <= 570 && (
@@ -53,8 +68,12 @@ export const EmployeePage = () => {
             <div className={styles.contentWrapper}>
                 {width <= 570 ? (
                     <div className={styles.buttonWrapper}>
-                        <MobileBtn src='/groupImg.svg'>сохранить визитку</MobileBtn>
-                        <MobileBtn src='/groupPhone.svg'>позвонить</MobileBtn>
+                        <MobileBtn src='/groupImg.svg' onClick={handleDownloadVcf}>
+                            сохранить визитку
+                        </MobileBtn>
+                        <MobileBtn src='/groupPhone.svg' onClick={() => {}}>
+                            позвонить
+                        </MobileBtn>
                     </div>
                 ) : (
                     <div className={styles.switchContainer}>
