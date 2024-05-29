@@ -10,23 +10,28 @@
         "items": [
             {
                 "name": "+79725617548",
-                "url": "./mobileImg.svg"
+                "url": "./mobileImg.svg",
+                "type": "phone"
             },
             {
                 "name": "+79725617548",
-                "url": "./phoneImg.svg"
+                "url": "./phoneImg.svg",
+                "type": "phone"
             },
             {
                 "name": "+79725617548",
-                "url": "./phoneImg.svg"
+                "url": "./phoneImg.svg",
+                "type": "phone"
             },
             {
                 "name": "IvanPetr@gmail.com",
-                "url": "./mailImg.svg"
+                "url": "./mailImg.svg",
+                "type": "mail"
             },
             {
                 "name": "IvanPetr@gmail.com",
-                "url": "./urlImg.svg"
+                "url": "./urlImg.svg",
+                "type": "mail"
             },
             {
                 "name": "Санкт-Петербург, Аптекарская набережная, 20",
@@ -44,15 +49,18 @@
         "companyItems": [
             {
                 "name": "+79725617548",
-                "url": "./mobileImg.svg"
+                "url": "./mobileImg.svg",
+                "type": "phone"
             },
             {
                 "name": "IvanPetr@gmail.com",
-                "url": "./mailImg.svg"
+                "url": "./mailImg.svg",
+                "type": "mail"
             },
             {
                 "name": "IvanPetr@gmail.com",
-                "url": "./urlImg.svg"
+                "url": "./urlImg.svg",
+                "type": "mail"
             },
             {
                 "name": "Санкт-Петербург, Аптекарская набережная, 20",
@@ -74,47 +82,61 @@
         "links": [
             {
                 "img": "./Telegram.svg",
-                "link": ""
+                "link": "https://web.telegram.org/a/"
             },
             {
                 "img": "./Whatsapp.svg",
-                "link": ""
+                "link": "https://www.whatsapp.com/?lang=ru_RU"
             },
             {
                 "img": "./Viber.svg",
-                "link": ""
+                "link": "https://www.viber.com/ru/"
             },
             {
                 "img": "./Instagram.svg",
-                "link": ""
+                "link": "https://www.instagram.com/"
             },
             {
-                "img": "Vk.svg",
-                "link": ""
+                "img": "./Vk.svg",
+                "link": "https://vk.com/"
             },
             {
-                "img": "Facebook.svg",
-                "link": ""
+                "img": "./Facebook.svg",
+                "link": "https://www.facebook.com/?locale=ru_RU"
             },
             {
                 "img": "./YouTube.svg",
-                "link": ""
+                "link": "https://www.youtube.com/"
             },
             {
                 "img": "./Ok.svg",
-                "link": ""
+                "link": "https://ok.ru/"
             },
             {
                 "img": "./Dzen.svg",
-                "link": ""
+                "link": "https://dzen.ru/?utm_referrer=www.google.com"
             },
             {
-                "img": "Tiktok.svg",
-                "link": ""
+                "img": "./Tiktok.svg",
+                "link": "https://www.tiktok.com/ru-RU/"
             },
             {
-                "img": "Linked_in.svg",
-                "link": ""
+                "img": "./Linked_in.svg",
+                "link": "https://ru.linkedin.com/"
+            }
+        ],
+        "photo": [
+            {
+                "link": "./baseImg.png",
+                "alt": "фото сотрудника"
+            },
+            {
+                "link": "./baseImg.png",
+                "alt": "фото сотрудника"
+            },
+            {
+                "link": "./baseImg.png",
+                "alt": "фото сотрудника"
             }
         ]
     }

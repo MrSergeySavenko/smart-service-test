@@ -15,18 +15,32 @@
     height: 24px;
 }
 
+.link {
+    margin-bottom: 0;
+}
+
 @media (max-width: 571px) {
     .wrapper {
         padding: 0 20px;
     }
 
-    .img {
-        width: 52px;
-        height: 52px;
+    .link {
         margin-bottom: 31px;
+        margin-right: 10px;
 
         &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    .img {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+@media (max-width: 383px) {
+    .link {
+        margin-right: 0;
     }
 }

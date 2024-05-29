@@ -29,7 +29,6 @@ export const EmployeePage = () => {
             setWidth(event.target.innerWidth);
         };
         window.addEventListener('resize', handleResize);
-        console.log(width);
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -48,7 +47,7 @@ export const EmployeePage = () => {
             {width <= 570 && (
                 <>
                     <Logo logo={data?.info.logo} />
-                    <Swiper />
+                    <Swiper data={data} />
                 </>
             )}
             <div className={styles.contentWrapper}>
@@ -71,7 +70,7 @@ export const EmployeePage = () => {
 
                 <div className={styles.whiteBlockWrapper}>
                     <div className={styles.wrapper}>
-                        {width > 570 && <ImageBlock />}
+                        {width > 570 && <ImageBlock data={data} />}
 
                         <InfoBlock infoArr={data?.items} infoText={data?.info} width={width} />
                     </div>

@@ -3,10 +3,10 @@ import React from 'react';
 import styles from './image-block.module.scss';
 import { Swiper } from '../../shared/swiper/swiper';
 
-export const ImageBlock = () => {
+export const ImageBlock = ({ data }) => {
     return (
         <div className={styles.wrapper}>
-            <Swiper />
+            <Swiper data={data} />
             <button className={styles.button}>добавить в контакты</button>
         </div>
     );

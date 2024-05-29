@@ -1,16 +1,35 @@
 import React from 'react';
 
 import styles from './info-block.module.scss';
-import { uniqueKey } from '../../../__data__/utils/utils';
+import { formatPhoneNum, uniqueKey } from '../../../__data__/utils/utils';
 import { Logo } from '../../shared/logo/logo';
 
 export const InfoBlock = ({ infoArr, infoText, width }) => {
+    const returnTypeOfHref = (name, type) => {
+        switch (type) {
+            case 'phone':
+                return (
+                    <a className={styles.href} href={`tel:${name}`}>
+                        {formatPhoneNum(name)}
+                    </a>
+                );
+            case 'mail':
+                return (
+                    <a className={styles.href} href={`mailto:${name}`}>
+                        {name}
+                    </a>
+                );
+            default:
+                return <p className={styles.text}>{name}</p>;
+        }
+    };
+
     const renderInfo = () =>
         infoArr?.map((item, i) => {
             return (
                 <div key={uniqueKey(item.name, i)} className={styles.wrapper}>
                     <img src={item.url} className={styles.img} alt='знак' />
-                    <p className={styles.text}>{item.name}</p>
+                    {returnTypeOfHref(item.name, item.type)}
                 </div>
             );
         });

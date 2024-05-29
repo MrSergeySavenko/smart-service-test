@@ -33,6 +33,18 @@
     text-wrap: wrap;
 }
 
+.href {
+    color: #060606;
+    font-family: TT Firs Neue;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    max-width: 205px;
+    text-wrap: wrap;
+    text-decoration: none;
+}
+
 @media (max-width: 571px) {
     .contentWrapper {
         padding-left: 20px;
