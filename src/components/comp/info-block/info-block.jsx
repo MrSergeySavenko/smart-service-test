@@ -41,13 +41,13 @@ export const InfoBlock = ({ infoArr, infoText, width }) => {
             ) : (
                 <>
                     <Logo logo={infoText?.logo} />
-                    <nav className={styles.line} />
+                    <div className={styles.line}></div>
                 </>
             )}
             <div className={styles.contentWrapper}>
                 <p className={styles.name}>{infoText?.name}</p>
                 <p className={styles.position}>{infoText?.position}</p>
-                {width <= 560 ? <nav className={styles.titleLine} /> : <></>}
+                {width <= 560 ? <div className={styles.titleLine}></div> : <></>}
                 <div className={styles.linksWrapper}>{renderInfo()}</div>
             </div>
         </div>

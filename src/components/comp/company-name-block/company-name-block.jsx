@@ -14,7 +14,7 @@ export const CompanyNameBlock = ({ width }) => {
                 <p className={styles.companyName}>{data?.info.companyName}</p>
                 <p className={styles.description}>{data?.info.description}</p>
             </div>
-            {width < 570 && <nav className={styles.line} />}
+            {width < 570 && <div className={styles.line}></div>}
         </>
     );
 };

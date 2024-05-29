@@ -10,13 +10,8 @@ export const LinksFooter = () => {
     const renderLinks = () =>
         data?.links.map((item, i) => {
             return (
-                <a className={styles.link} href={item.link} target='_blank'>
-                    <img
-                        key={uniqueKey(item.img, i)}
-                        src={item.img}
-                        className={styles.img}
-                        alt='картинка соцсетей'
-                    />
+                <a className={styles.link} href={item.link} target='_blank' key={uniqueKey(item.img, i)}>
+                    <img src={item.img} className={styles.img} alt='картинка соцсетей' />
                 </a>
             );
         });

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './company-info-block.module.scss';
-import { uniqueKey } from '../../../__data__/utils/utils';
+import { formatPhoneNum, uniqueKey } from '../../../__data__/utils/utils';
 
 export const CompanyInfoBlock = ({ infoArr }) => {
     const returnTypeOfHref = (name, type) => {
@@ -9,7 +9,7 @@ export const CompanyInfoBlock = ({ infoArr }) => {
             case 'phone':
                 return (
                     <a className={styles.href} href={`tel:${name}`}>
-                        {name}
+                        {formatPhoneNum(name)}
                     </a>
                 );
             case 'mail':

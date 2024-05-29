@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './employee-page.module.scss';
 import { SwitchButton } from '../../components/comp/switch-button/switch-button';
@@ -42,13 +42,26 @@ export const EmployeePage = () => {
         return navigate('/company');
     };
 
-    const handleDownloadVcf = () => {
-        const text = 'Hellow';
-        console.log('click');
+    const handleDownloadVcf = (data) => {
+        const [surName, name, secondName] = data?.info.name.split(' ');
+
+        const text = [
+            'BEGIN:VCARD',
+            'VERSION:3.0',
+            `N:${surName};${name};${secondName}`,
+            `FN:${name} ${secondName} ${surName}`,
+            `TEL;CELL:${data?.items[0].name}`,
+            `TEL;TYPE=WORK:${data?.items[1].name}`,
+            `EMAIL;TYPE=INTERNET:${data?.items[4].name}`,
+            'END:VCARD',
+        ].join('\n');
+
+        const blob = new Blob([text], { type: 'text/vcard' });
+
         const link = document.createElement('a');
 
-        link.href = new Blob([text], { type: 'plain/text' });
-        link.setAttribute('download', `1.txt`);
+        link.href = window.URL.createObjectURL(blob);
+        link.setAttribute('download', 'SmartService.vcf');
 
         document.body.appendChild(link);
 
@@ -68,10 +81,10 @@ export const EmployeePage = () => {
             <div className={styles.contentWrapper}>
                 {width <= 570 ? (
                     <div className={styles.buttonWrapper}>
-                        <MobileBtn src='/groupImg.svg' onClick={handleDownloadVcf}>
+                        <MobileBtn src='/groupImg.svg' type='button' onClick={handleDownloadVcf}>
                             сохранить визитку
                         </MobileBtn>
-                        <MobileBtn src='/groupPhone.svg' onClick={() => {}}>
+                        <MobileBtn src='/groupPhone.svg' type='link' phone={data?.items[0].name}>
                             позвонить
                         </MobileBtn>
                     </div>
@@ -94,7 +107,7 @@ export const EmployeePage = () => {
                         <InfoBlock infoArr={data?.items} infoText={data?.info} width={width} />
                     </div>
                     <div className={styles.footerWrapper}>
-                        <nav className={styles.line} />
+                        <div className={styles.line}></div>
                         <LinksFooter />
                     </div>
                 </div>

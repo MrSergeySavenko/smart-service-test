@@ -55,13 +55,13 @@ export const CompanyPage = () => {
                     </div>
                 )}
                 <div className={styles.whiteBlockWrapper}>
-                    {width > 570 && <nav className={styles.line} />}
+                    {width > 570 && <div className={styles.line}></div>}
                     <div className={styles.wrapper}>
                         <CompanyNameBlock width={width} />
                         <CompanyInfoBlock infoArr={data?.companyItems} />
                     </div>
                     <div className={styles.footerWrapper}>
-                        <nav className={styles.line} />
+                        <div className={styles.line}></div>
                         <LinksFooter />
                     </div>
                 </div>

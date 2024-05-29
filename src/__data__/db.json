@@ -4,12 +4,12 @@
             "logo": "MI Lorain",
             "name": "Иванов Иван Петрович",
             "position": "Директор",
-            "companyName": "Smart Service",
+            "companyName": "Смарт Сервис",
             "description": "Нача компания предоставляет лучшее обслуживаение в сфере IT технологий."
         },
         "items": [
             {
-                "name": "+79725617548",
+                "name": "+79094676875",
                 "url": "./mobileImg.svg",
                 "type": "phone"
             },
@@ -19,7 +19,7 @@
                 "type": "phone"
             },
             {
-                "name": "+79725617548",
+                "name": "+79213678994",
                 "url": "./phoneImg.svg",
                 "type": "phone"
             },
