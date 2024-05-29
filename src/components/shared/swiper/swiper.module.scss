@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 16px;
+    align-items: center;
 }
 
 .imgTrack {
@@ -12,7 +14,6 @@
     max-width: 279px;
     width: 100%;
     height: 495px;
-    margin-bottom: 16px;
     scroll-behavior: smooth;
     scroll-snap-type: x;
 }
@@ -23,10 +24,12 @@
 
 .img {
     height: 495px;
+    min-width: 100%;
     border-radius: 8.11px;
     user-select: none;
     pointer-events: none;
     scroll-snap-align: start;
+    object-fit: cover;
 }
 
 .btnWrapper {
@@ -50,12 +53,36 @@
     }
 }
 
+.activeSlideButton {
+    width: 33px;
+    height: 6px;
+    border-radius: 16px;
+    background: #060606;
+    margin-right: 6px;
+}
+
 @media (max-width: 571px) {
-    .sliderList {
+    .photoContainer {
         height: 369px;
         width: 100%;
-        background-size: cover;
-        border-radius: 0px;
+        border-radius: none;
         margin-bottom: 44px;
+    }
+
+    .imgTrack {
+        max-width: none;
+
+        height: 369px;
+    }
+
+    .btnWrapper {
+        position: static;
+        margin-top: -48px;
+    }
+
+    .img {
+        border-radius: 0;
+
+        height: 369px;
     }
 }

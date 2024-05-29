@@ -1,7 +1,7 @@
 {
     "items": {
         "info": {
-            "logo": "Бытро и качественно",
+            "logo": "MI Lorain",
             "name": "Иванов Иван Петрович",
             "position": "Директор",
             "companyName": "Smart Service",
@@ -128,14 +128,32 @@
         "photo": [
             {
                 "link": "./baseImg.png",
+                "linkMobile": "./mobileImg.png",
                 "alt": "фото сотрудника"
             },
             {
                 "link": "./baseImg.png",
+                "linkMobile": "./mobileImg.png",
                 "alt": "фото сотрудника"
             },
             {
                 "link": "./baseImg.png",
+                "linkMobile": "./mobileImg.png",
+                "alt": "фото сотрудника"
+            },
+            {
+                "link": "./baseImg.png",
+                "linkMobile": "./mobileImg.png",
+                "alt": "фото сотрудника"
+            },
+            {
+                "link": "./baseImg.png",
+                "linkMobile": "./mobileImg.png",
+                "alt": "фото сотрудника"
+            },
+            {
+                "link": "./baseImg.png",
+                "linkMobile": "./mobileImg.png",
                 "alt": "фото сотрудника"
             }
         ]

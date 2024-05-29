@@ -47,7 +47,7 @@ export const EmployeePage = () => {
             {width <= 570 && (
                 <>
                     <Logo logo={data?.info.logo} />
-                    <Swiper data={data} />
+                    <Swiper data={data} width={width} />
                 </>
             )}
             <div className={styles.contentWrapper}>
@@ -70,7 +70,7 @@ export const EmployeePage = () => {
 
                 <div className={styles.whiteBlockWrapper}>
                     <div className={styles.wrapper}>
-                        {width > 570 && <ImageBlock data={data} />}
+                        {width > 570 && <ImageBlock data={data} width={width} />}
 
                         <InfoBlock infoArr={data?.items} infoText={data?.info} width={width} />
                     </div>
