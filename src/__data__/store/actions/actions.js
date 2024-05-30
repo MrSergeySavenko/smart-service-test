@@ -4,7 +4,7 @@ export const fetchData = () => async (dispatch) => {
     try {
         dispatch(smartServiceSlice.actions.dataFetch());
 
-        const url = `https://mrsergeysavenko.github.io/server-for-smart-service/db.json`;
+        const url = `https://my-json-server.typicode.com/MrSergeySavenko/server-for-smart-service`;
 
         const response = await fetch(url);
         const data = await response.json();
