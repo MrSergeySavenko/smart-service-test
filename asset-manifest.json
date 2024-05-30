@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/smart-service-test/static/css/main.7acb2518.css",
-    "main.js": "/smart-service-test/static/js/main.cd6d19d3.js",
+    "main.css": "/smart-service-test/static/css/main.a8027411.css",
+    "main.js": "/smart-service-test/static/js/main.320709c6.js",
     "static/media/AbhayaLibre-ExtraBold.ttf": "/smart-service-test/static/media/AbhayaLibre-ExtraBold.b645e04f752c5e976e1a.ttf",
     "static/media/AbhayaLibre-ExtraBold.woff": "/smart-service-test/static/media/AbhayaLibre-ExtraBold.7e12b0f5eb223a091b7e.woff",
     "static/media/AbhayaLibre-ExtraBold.woff2": "/smart-service-test/static/media/AbhayaLibre-ExtraBold.6656edd3e2b1a7c4bf0e.woff2",
@@ -14,11 +14,11 @@
     "static/media/TTFirsNeue-Bold.woff2": "/smart-service-test/static/media/TTFirsNeue-Bold.b6b7358cb98d63027a2a.woff2",
     "static/media/TTFirsNeue-Regular.woff2": "/smart-service-test/static/media/TTFirsNeue-Regular.aa35bc5e7e663660cc20.woff2",
     "index.html": "/smart-service-test/index.html",
-    "main.7acb2518.css.map": "/smart-service-test/static/css/main.7acb2518.css.map",
-    "main.cd6d19d3.js.map": "/smart-service-test/static/js/main.cd6d19d3.js.map"
+    "main.a8027411.css.map": "/smart-service-test/static/css/main.a8027411.css.map",
+    "main.320709c6.js.map": "/smart-service-test/static/js/main.320709c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acb2518.css",
-    "static/js/main.cd6d19d3.js"
+    "static/css/main.a8027411.css",
+    "static/js/main.320709c6.js"
   ]
 }
