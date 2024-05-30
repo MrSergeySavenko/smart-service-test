@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+import groupImg from '../../assets/groupImg.svg';
+import groupPhoneImg from '../../assets/groupPhone.svg';
+
 import styles from './employee-page.module.scss';
 import { SwitchButton } from '../../components/comp/switch-button/switch-button';
 import { ImageBlock } from '../../components/comp/image-block/image-block';
@@ -81,10 +84,10 @@ export const EmployeePage = () => {
             <div className={styles.contentWrapper}>
                 {width <= 570 ? (
                     <div className={styles.buttonWrapper}>
-                        <MobileBtn src='/groupImg.svg' type='button' onClick={handleDownloadVcf}>
+                        <MobileBtn src={groupImg} type='button' onClick={handleDownloadVcf}>
                             сохранить визитку
                         </MobileBtn>
-                        <MobileBtn src='/groupPhone.svg' type='link' phone={data?.items[0].name}>
+                        <MobileBtn src={groupPhoneImg} type='link' phone={data?.items[0].name}>
                             позвонить
                         </MobileBtn>
                     </div>
