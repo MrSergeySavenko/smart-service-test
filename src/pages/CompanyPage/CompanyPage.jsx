@@ -16,10 +16,6 @@ export const CompanyPage = () => {
 
     const navigate = useNavigate();
 
-    const handleNavigateToEmployee = () => {
-        return navigate('/employee');
-    };
-
     useEffect(() => {
         const handleResize = (event) => {
             setWidth(event.target.innerWidth);
@@ -32,6 +28,10 @@ export const CompanyPage = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, [window.innerWidth]);
+
+    const handleNavigateToEmployee = () => {
+        return navigate('/employee');
+    };
 
     return (
         <div className={styles.allWrapper}>
