@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
-import styles from './swiper.module.scss';
-import { uniqueKey } from '../../../__data__/utils/utils';
+import styles from './slider.module.scss';
+import { uniqueKey } from '../../__data__/utils/utils';
 
-export const Swiper = ({ data, isMobile }) => {
+export const Slider = ({ data, isMobile }) => {
     const [activeBtn, setActiveBtn] = useState(0);
 
     const renderSlides = () =>

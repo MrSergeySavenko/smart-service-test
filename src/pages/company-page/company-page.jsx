@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './company-page.module.scss';
-import { SwitchButton } from '../../components/comp/switch-button/switch-button';
-import { LinksFooter } from '../../components/comp/links-footer/links-footer';
+import { SwitchButton } from '../../components/switch-button/switch-button';
+import { LinksFooter } from '../../components/links-footer/links-footer';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { CompanyNameBlock } from '../../components/comp/company-name-block/company-name-block';
-import { CompanyInfoBlock } from '../../components/comp/company-info-block/company-info-block';
+import { CompanyNameBlock } from './company-name-block/company-name-block';
+import { CompanyInfoBlock } from './company-info-block/company-info-block';
 import { useMobile } from '../../__data__/hooks/useMobile';
 
 export const CompanyPage = () => {

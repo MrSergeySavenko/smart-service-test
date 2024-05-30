@@ -1,6 +1,6 @@
 import React from 'react';
 
-import arrow from '../../../assets/arrow.svg';
+import arrow from '../../assets/arrow.svg';
 
 import styles from './switch-button.module.scss';
 

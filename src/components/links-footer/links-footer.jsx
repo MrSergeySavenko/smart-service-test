@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './links-footer.module.scss';
 import { useSelector } from 'react-redux';
-import { uniqueKey } from '../../../__data__/utils/utils';
+import { uniqueKey } from '../../__data__/utils/utils';
 
 export const LinksFooter = () => {
     const { data } = useSelector((state) => state.smartService);

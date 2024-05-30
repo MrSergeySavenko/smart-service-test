@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './info-block.module.scss';
 import { formatPhoneNum, uniqueKey } from '../../../__data__/utils/utils';
-import { Logo } from '../../shared/logo/logo';
+import { Logo } from '../../../components/logo/logo';
 
 export const InfoBlock = ({ infoArr, infoText, isMobile }) => {
     const returnTypeOfHref = (name, type) => {
@@ -37,10 +37,10 @@ export const InfoBlock = ({ infoArr, infoText, isMobile }) => {
     return (
         <div className={styles.infoWrapper}>
             {!isMobile && (
-                <>
+                <div className={styles.logoWrapper}>
                     <Logo logo={infoText?.logo} />
                     <div className={styles.line}></div>
-                </>
+                </div>
             )}
             <div className={styles.contentWrapper}>
                 <p className={styles.name}>{infoText?.name}</p>
