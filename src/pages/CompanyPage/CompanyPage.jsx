@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './company-page.module.scss';
 import { SwitchButton } from '../../components/comp/switch-button/switch-button';
-import { InfoBlock } from '../../components/comp/info-block/info-block';
 import { LinksFooter } from '../../components/comp/links-footer/links-footer';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -28,6 +27,12 @@ export const CompanyPage = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, [window.innerWidth]);
+
+    useEffect(() => {
+        if (!data) {
+            return navigate('/empoloyee');
+        }
+    });
 
     const handleNavigateToEmployee = () => {
         return navigate('/employee');
