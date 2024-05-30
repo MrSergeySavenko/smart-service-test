@@ -4,7 +4,7 @@ export const fetchData = () => async (dispatch) => {
     try {
         dispatch(smartServiceSlice.actions.dataFetch());
 
-        const url = `http://localhost:3001/users`;
+        const url = `http://localhost:8000/items`;
 
         const response = await fetch(url);
         const data = await response.json();
