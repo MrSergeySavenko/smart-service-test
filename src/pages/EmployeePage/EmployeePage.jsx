@@ -15,27 +15,18 @@ import { Logo } from '../../components/shared/logo/logo';
 import { Swiper } from '../../components/shared/swiper/swiper';
 import { MobileBtn } from '../../components/comp/mobile-btn/mobile-btn';
 import { CompanyPage } from '../CompanyPage/CompanyPage';
+import { useMobile } from '../../__data__/hooks/useMobile';
 
 export const EmployeePage = () => {
     const { data } = useSelector((state) => state.smartService);
 
-    const [width, setWidth] = useState(window.innerWidth);
+    const isMobile = useMobile();
 
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
     //потом засунуть в катсомный хук
-
-    useEffect(() => {
-        const handleResize = (event) => {
-            setWidth(event.target.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [window.innerWidth]);
 
     useEffect(() => {
         dispatch(fetchData());
@@ -45,7 +36,7 @@ export const EmployeePage = () => {
         return navigate('/company');
     };
 
-    const handleDownloadVcf = (data) => {
+    const handleDownloadVcf = () => {
         const [surName, name, secondName] = data?.info.name.split(' ');
 
         const text = [
@@ -75,14 +66,14 @@ export const EmployeePage = () => {
 
     return (
         <div className={styles.allWrapper}>
-            {width <= 570 && (
+            {isMobile && (
                 <>
                     <Logo logo={data?.info.logo} />
-                    <Swiper data={data} width={width} />
+                    <Swiper data={data} isMobile={isMobile} />
                 </>
             )}
             <div className={styles.contentWrapper}>
-                {width <= 570 ? (
+                {isMobile ? (
                     <div className={styles.buttonWrapper}>
                         <MobileBtn src={groupImg} type='button' onClick={handleDownloadVcf}>
                             сохранить визитку
@@ -105,16 +96,16 @@ export const EmployeePage = () => {
 
                 <div className={styles.whiteBlockWrapper}>
                     <div className={styles.wrapper}>
-                        {width > 570 && <ImageBlock data={data} width={width} />}
+                        {!isMobile && <ImageBlock data={data} isMobile={isMobile} />}
 
-                        <InfoBlock infoArr={data?.items} infoText={data?.info} width={width} />
+                        <InfoBlock infoArr={data?.items} infoText={data?.info} isMobile={isMobile} />
                     </div>
                     <div className={styles.footerWrapper}>
                         <div className={styles.line}></div>
                         <LinksFooter />
                     </div>
                 </div>
-                {width < 570 && <CompanyPage />}
+                {isMobile && <CompanyPage />}
             </div>
         </div>
     );

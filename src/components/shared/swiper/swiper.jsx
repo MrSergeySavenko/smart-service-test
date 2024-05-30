@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './swiper.module.scss';
 import { uniqueKey } from '../../../__data__/utils/utils';
 
-export const Swiper = ({ data, width }) => {
+export const Swiper = ({ data, isMobile }) => {
     const [activeBtn, setActiveBtn] = useState(0);
 
     const renderSlides = () =>
@@ -11,7 +11,7 @@ export const Swiper = ({ data, width }) => {
             <img
                 className={styles.img}
                 id={i}
-                src={width > 570 ? item.link : item.linkMobile}
+                src={!isMobile ? item.link : item.linkMobile}
                 alt={item.alt}
                 key={uniqueKey(item.alt, i)}
             />
@@ -21,7 +21,6 @@ export const Swiper = ({ data, width }) => {
         const needFrame = document.getElementById(id);
         needFrame.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         setActiveBtn(id);
-        console.log(needFrame.getBoundingClientRect());
     };
 
     const renderSlideBtn = () =>

@@ -7,32 +7,20 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { CompanyNameBlock } from '../../components/comp/company-name-block/company-name-block';
 import { CompanyInfoBlock } from '../../components/comp/company-info-block/company-info-block';
+import { useMobile } from '../../__data__/hooks/useMobile';
 
 export const CompanyPage = () => {
     const { data } = useSelector((state) => state.smartService);
 
-    const [width, setWidth] = useState(window.innerWidth);
+    const isMobile = useMobile();
 
     const navigate = useNavigate();
 
     useEffect(() => {
-        const handleResize = (event) => {
-            setWidth(event.target.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-        if (width <= 570) {
+        if (!data || isMobile) {
             return navigate('/empoloyee');
         }
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [window.innerWidth]);
-
-    useEffect(() => {
-        if (!data) {
-            return navigate('/empoloyee');
-        }
-    });
+    }, []);
 
     const handleNavigateToEmployee = () => {
         return navigate('/employee');
@@ -41,7 +29,7 @@ export const CompanyPage = () => {
     return (
         <div className={styles.allWrapper}>
             <div className={styles.contentWrapper}>
-                {width > 570 && (
+                {!isMobile && (
                     <div className={styles.switchContainer}>
                         <>
                             <SwitchButton
@@ -60,9 +48,9 @@ export const CompanyPage = () => {
                     </div>
                 )}
                 <div className={styles.whiteBlockWrapper}>
-                    {width > 570 && <div className={styles.line}></div>}
+                    {!isMobile && <div className={styles.line}></div>}
                     <div className={styles.wrapper}>
-                        <CompanyNameBlock width={width} />
+                        <CompanyNameBlock isMobile={isMobile} />
                         <CompanyInfoBlock infoArr={data?.companyItems} />
                     </div>
                     <div className={styles.footerWrapper}>

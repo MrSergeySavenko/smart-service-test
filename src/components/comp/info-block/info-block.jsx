@@ -4,7 +4,7 @@ import styles from './info-block.module.scss';
 import { formatPhoneNum, uniqueKey } from '../../../__data__/utils/utils';
 import { Logo } from '../../shared/logo/logo';
 
-export const InfoBlock = ({ infoArr, infoText, width }) => {
+export const InfoBlock = ({ infoArr, infoText, isMobile }) => {
     const returnTypeOfHref = (name, type) => {
         switch (type) {
             case 'phone':
@@ -36,9 +36,7 @@ export const InfoBlock = ({ infoArr, infoText, width }) => {
 
     return (
         <div className={styles.infoWrapper}>
-            {width <= 560 ? (
-                <></>
-            ) : (
+            {!isMobile && (
                 <>
                     <Logo logo={infoText?.logo} />
                     <div className={styles.line}></div>
@@ -47,7 +45,7 @@ export const InfoBlock = ({ infoArr, infoText, width }) => {
             <div className={styles.contentWrapper}>
                 <p className={styles.name}>{infoText?.name}</p>
                 <p className={styles.position}>{infoText?.position}</p>
-                {width <= 560 ? <div className={styles.titleLine}></div> : <></>}
+                {isMobile && <div className={styles.titleLine}></div>}
                 <div className={styles.linksWrapper}>{renderInfo()}</div>
             </div>
         </div>
