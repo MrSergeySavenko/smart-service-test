@@ -1,7 +1,7 @@
 import React from 'react';
 
-import styles from './company-info-block.module.scss';
 import { formatPhoneNum, uniqueKey } from '../../../__data__/utils/utils';
+import styles from './company-info-block.module.scss';
 
 export const CompanyInfoBlock = ({ infoArr }) => {
     const returnTypeOfHref = (name, type) => {

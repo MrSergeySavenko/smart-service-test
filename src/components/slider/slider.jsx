@@ -24,7 +24,7 @@ export const Slider = ({ data, isMobile }) => {
     };
 
     const renderSlideBtn = () =>
-        data?.photo.map((item, i) => (
+        data?.photo.map((_, i) => (
             <div
                 className={activeBtn === i ? styles.activeSlideButton : styles.slideButton}
                 key={uniqueKey('name', i)}

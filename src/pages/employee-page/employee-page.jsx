@@ -1,32 +1,28 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
-import groupImg from '../../assets/groupImg.svg';
-import groupPhoneImg from '../../assets/groupPhone.svg';
-
-import styles from './employee-page.module.scss';
 import { SwitchButton } from '../../components/switch-button/switch-button';
 import { ImageBlock } from './image-block/image-block';
-import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../__data__/store/actions/actions';
 import { InfoBlock } from './info-block/info-block';
 import { LinksFooter } from '../../components/links-footer/links-footer';
-import { useNavigate } from 'react-router-dom';
 import { Logo } from '../../components/logo/logo';
 import { Slider } from '../../components/slider/slider';
 import { MobileBtn } from './mobile-btn/mobile-btn';
 import { CompanyPage } from '../company-page/company-page';
 import { useMobile } from '../../__data__/hooks/useMobile';
 
+import groupImg from '../../assets/groupImg.svg';
+import groupPhoneImg from '../../assets/groupPhone.svg';
+import styles from './employee-page.module.scss';
+
 export const EmployeePage = () => {
     const { data } = useSelector((state) => state.smartService);
 
     const isMobile = useMobile();
-
     const dispatch = useDispatch();
-
     const navigate = useNavigate();
-
-    //потом засунуть в катсомный хук
 
     useEffect(() => {
         dispatch(fetchData());

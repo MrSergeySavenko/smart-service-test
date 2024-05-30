@@ -1,8 +1,8 @@
 import React from 'react';
-
-import styles from './company-name-block.module.scss';
 import { useSelector } from 'react-redux';
+
 import { Logo } from '../../../components/logo/logo';
+import styles from './company-name-block.module.scss';
 
 export const CompanyNameBlock = ({ isMobile }) => {
     const { data } = useSelector((state) => state.smartService);

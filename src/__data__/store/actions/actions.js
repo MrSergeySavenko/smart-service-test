@@ -1,4 +1,4 @@
-import { smartServiceSlice } from '../reduser';
+import { smartServiceSlice } from '../reducer';
 
 export const fetchData = () => async (dispatch) => {
     try {
